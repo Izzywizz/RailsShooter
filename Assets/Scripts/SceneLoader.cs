@@ -16,12 +16,22 @@ public class SceneLoader : MonoBehaviour
     /// <summary>
     /// 
     /// </summary>
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
     private void Start()
     {
         if (_loadingCoroutine == null)
         {
             _loadingCoroutine = StartCoroutine(DelaySceneLoadingAfterTime(_loadDelayTime));
         }
+
     }
 
 
