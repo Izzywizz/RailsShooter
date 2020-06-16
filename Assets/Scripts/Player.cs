@@ -10,6 +10,12 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _xSpeed = 4.0f;
 
+    [Tooltip("X Clamp Value")]
+    [SerializeField]
+    [Range(0.0f, 4.0f)]
+    private float _xClampValue = 4.0f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +26,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-        float xOffsetThisFrame = xThrow * _xSpeed * Time.deltaTime;
-        Debug.Log(xOffsetThisFrame);
+        float xOffset = xThrow * _xSpeed * Time.deltaTime;
+        float rawXPos = transform.localPosition.x + xOffset;
+        float clampedRawXPos = Mathf.Clamp(transform.localPosition.x + xOffset, -_xClampValue, _xClampValue);
+
+        transform.localPosition = new Vector3(clampedRawXPos, transform.localPosition.y, transform.localPosition.z);
     }
 }
