@@ -15,12 +15,12 @@ public class Player : MonoBehaviour
 
     [Tooltip("The Min/ Max value the ship is contrained to in metres")]
     [SerializeField]
-    [Range(0.0f, 5.0f)]
+    [Range(0.0f, 10.0f)]
     private float _xClampValue = 5.0f;
 
     [Tooltip("The Min/ Max value the ship is contrained to in metres")]
     [SerializeField]
-    [Range(0.0f, 3.0f)]
+    [Range(0.0f, 10.0f)]
     private float _yClampedValue = 3.0f;
 
     [SerializeField]
@@ -77,6 +77,10 @@ public class Player : MonoBehaviour
         // Order matters with rotation
 
         float pitchDuetoPosition = transform.localPosition.y * _positionPitchFactor;
+
+        // recall that the Throw is the value that is taken from the movement of the control stick
+        // so when it left stick pushes up it points the nose of the place up based on that throw value
+      
         float pitchDueToControlThrow = _yThrow * _controlPitchFactor;
         float pitch = pitchDuetoPosition + pitchDueToControlThrow;
 
