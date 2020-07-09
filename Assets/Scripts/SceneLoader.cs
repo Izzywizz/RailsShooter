@@ -12,16 +12,6 @@ public class SceneLoader : MonoBehaviour
 
     private Coroutine _loadingCoroutine = null;
 
-
-    /// <summary>
-    /// 
-    /// </summary>
-    private void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
-
-
     /// <summary>
     /// 
     /// </summary>
@@ -42,7 +32,6 @@ public class SceneLoader : MonoBehaviour
     /// <returns></returns>
     private IEnumerator DelaySceneLoadingAfterTime(float _loadDelayTime)
     {
-        Debug.Log("Start");
         yield return new WaitForSeconds(_loadDelayTime);
         // Code to execute after the delay
         SceneManager.LoadSceneAsync(_sceneIndexForFirstLevel);
