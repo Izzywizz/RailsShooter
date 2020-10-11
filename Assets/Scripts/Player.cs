@@ -46,6 +46,27 @@ public class Player : MonoBehaviour
     }
 
 
+
+    /// <summary>
+    /// testing
+    /// </summary>
+    /// <param name="collision"></param>
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Player collided with something");
+    }
+
+
+    /// <summary>
+    /// testing triggering
+    /// </summary>
+    /// <param name="other"></param>
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Player triggered with somethings");
+    }
+
+
     /// <summary>
     /// 
     /// </summary>
