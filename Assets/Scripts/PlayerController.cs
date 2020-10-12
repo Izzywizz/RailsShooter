@@ -5,13 +5,13 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [Header("Speed, Clamp and Position/ Control Pitch")]
 
     [Tooltip("metres per second")]
     [SerializeField]
-    private float _speed = 20.0f;
+    private float _controlSpeed = 20.0f;
 
     [Tooltip("The Min/ Max value the ship is contrained to in metres")]
     [SerializeField]
@@ -23,47 +23,33 @@ public class Player : MonoBehaviour
     [Range(0.0f, 10.0f)]
     private float _yClampedValue = 3.0f;
 
+    [Header("Screen-Position Based")]
+
     [SerializeField]
     private float _positionPitchFactor = -5.0f;
 
     [SerializeField]
-    private float _controlPitchFactor = -20.0f;
-
-    [SerializeField]
     private float _positionYawFactor = 5.0f;
+
+    [Header("Control-Throw Based")]
+    [SerializeField]
+    private float _controlPitchFactor = -20.0f;
 
     [SerializeField]
     private float _controlRollFactor = -20.0f;
 
     private float _xThrow = 0.0f;
     private float _yThrow = 0.0f;
+    private bool _isControlsEnabled = true;
 
     /// Update is called once per frame
     void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
-    }
-
-
-
-    /// <summary>
-    /// testing
-    /// </summary>
-    /// <param name="collision"></param>
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Player collided with something");
-    }
-
-
-    /// <summary>
-    /// testing triggering
-    /// </summary>
-    /// <param name="other"></param>
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Player triggered with somethings");
+        if (_isControlsEnabled)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+        }
     }
 
 
@@ -74,17 +60,27 @@ public class Player : MonoBehaviour
     {
         // X - Direction
         _xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-        float xOffset = _xThrow * _speed * Time.deltaTime;
+        float xOffset = _xThrow * _controlSpeed * Time.deltaTime;
         float rawXPos = transform.localPosition.x + xOffset;
         float xClampedRawPos = Mathf.Clamp(rawXPos, -_xClampValue, _xClampValue);
 
         // Y - Direction Movement
         _yThrow = CrossPlatformInputManager.GetAxis("Vertical");
-        float yOffset = _yThrow * _speed * Time.deltaTime;
+        float yOffset = _yThrow * _controlSpeed * Time.deltaTime;
         float rawYPos = transform.localPosition.y + yOffset;
         float yClampedRawPos = Mathf.Clamp(rawYPos, -_yClampedValue, _yClampedValue);
 
         transform.localPosition = new Vector3(xClampedRawPos, yClampedRawPos, transform.localPosition.z);
+    }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void OnPlayerDeath()
+    {
+        Debug.Log("Freeze please");
+        _isControlsEnabled = false;
     }
 
 

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField]
-    private float _loadDelayTime = 1.0f;
+    private float _loadDelayTime = 5.0f;
 
     private int _sceneIndexForFirstLevel = 1;
 
@@ -26,6 +26,15 @@ public class SceneLoader : MonoBehaviour
 
 
     /// <summary>
+    /// 
+    /// </summary>
+    private void OnDisable()
+    {
+        _loadingCoroutine = null;
+    }
+
+
+    /// <summary>
     /// Coroutine that loads the next after a delay
     /// </summary>
     /// <param name="_loadDelayTime"></param>
@@ -34,7 +43,7 @@ public class SceneLoader : MonoBehaviour
     {
         yield return new WaitForSeconds(_loadDelayTime);
         // Code to execute after the delay
-        SceneManager.LoadSceneAsync(_sceneIndexForFirstLevel);
+        SceneManager.LoadScene(_sceneIndexForFirstLevel);
 
         _loadingCoroutine = null;
     }
