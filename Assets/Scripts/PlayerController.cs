@@ -79,7 +79,6 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void OnPlayerDeath()
     {
-        Debug.Log("Freeze please");
         _isControlsEnabled = false;
     }
 
