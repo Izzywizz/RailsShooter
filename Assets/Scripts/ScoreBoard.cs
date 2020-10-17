@@ -7,8 +7,6 @@ using TMPro;
 
 public class ScoreBoard : MonoBehaviour
 {
-    [SerializeField]
-    private int _scorePerHit = 12;
 
     private TextMeshProUGUI _scoreText = null;
     private int _score = 0;
@@ -25,9 +23,9 @@ public class ScoreBoard : MonoBehaviour
     /// <summary>
     /// Adds scorePerHit score to the total score
     /// </summary>
-    public void ScoreHit()
+    public void ScoreHit(int scoreGivenWhenHit)
     {
-        _score += _scorePerHit;
+        _score += scoreGivenWhenHit;
         _scoreText.text = _score.ToString();
     }
 
