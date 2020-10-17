@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour
     private GameObject _deathFXParticle = null;
 
     [SerializeField]
+    private int _hits = 3;
+
+    [SerializeField]
     private Transform _parent;
 
     private ScoreBoard _scoreBoard;
@@ -42,8 +45,29 @@ public class Enemy : MonoBehaviour
     /// <param name="other"></param>
     private void OnParticleCollision(GameObject other)
     {
-        _scoreBoard.ScoreHit(_scorePerHit);
+        ProcessHit();
 
+        if (_hits <= 0)
+        {
+            KillEnemy();
+        }
+    }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void ProcessHit()
+    {
+        _scoreBoard.ScoreHit(_scorePerHit);
+        _hits -= 1;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void KillEnemy()
+    {
         if (_deathFXParticle != null && _parent != null)
         {
             GameObject deathParticleFX = Instantiate(_deathFXParticle, transform.position, Quaternion.identity);

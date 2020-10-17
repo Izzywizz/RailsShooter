@@ -225,9 +225,17 @@ PrefabInstance:
       propertyPath: _scorePerHit
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1992350726, guid: a19af03b7c64771489f010af565cc649, type: 3}
+      propertyPath: _maxHits
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992350726, guid: a19af03b7c64771489f010af565cc649, type: 3}
+      propertyPath: _hits
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1469320689751860, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_Name
-      value: Ship_04 (3)
+      value: Random
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalPosition.x
@@ -431,9 +439,17 @@ PrefabInstance:
       propertyPath: _scorePerHit
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1992350726, guid: a19af03b7c64771489f010af565cc649, type: 3}
+      propertyPath: _maxHits
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992350726, guid: a19af03b7c64771489f010af565cc649, type: 3}
+      propertyPath: _hits
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1469320689751860, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_Name
-      value: Ship_04 (1)
+      value: Jimmy's Friend
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalPosition.x
@@ -508,13 +524,21 @@ PrefabInstance:
       propertyPath: _parent
       value: 
       objectReference: {fileID: 1868089964}
+    - target: {fileID: 1992350726, guid: a19af03b7c64771489f010af565cc649, type: 3}
+      propertyPath: _maxHits
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992350726, guid: a19af03b7c64771489f010af565cc649, type: 3}
+      propertyPath: _hits
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1469320689751860, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_Name
-      value: Ship_04
+      value: Jimmy
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.609993
+      value: -6.470001
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalPosition.y
@@ -526,19 +550,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.70057327
+      value: 0.6721742
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.1974456
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.20111148
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7135804
+      value: -0.6846541
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_RootOrder
@@ -546,7 +570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 271.054
+      value: 271.05402
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -554,7 +578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -32.739
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a19af03b7c64771489f010af565cc649, type: 3}
@@ -584,9 +608,17 @@ PrefabInstance:
       propertyPath: _scorePerHit
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1992350726, guid: a19af03b7c64771489f010af565cc649, type: 3}
+      propertyPath: _maxHits
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992350726, guid: a19af03b7c64771489f010af565cc649, type: 3}
+      propertyPath: _hits
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1469320689751860, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_Name
-      value: Ship_04 (2)
+      value: Not Jimmy's Friend
       objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1832,5 +1864,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 9.728189
       objectReference: {fileID: 0}
+    - target: {fileID: 9182793883650072591, guid: 20858ac7090f4c94aacb04e95f677c5f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b1dbe1232b9e65a42894a71e5a3bbe96, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20858ac7090f4c94aacb04e95f677c5f, type: 3}
