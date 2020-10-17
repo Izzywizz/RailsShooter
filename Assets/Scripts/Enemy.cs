@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject _deathFXParticle = null;
 
     /// <summary>
     /// 
@@ -22,7 +24,10 @@ public class Enemy : MonoBehaviour
     /// <param name="other"></param>
     private void OnParticleCollision(GameObject other)
     {
-        Debug.Log("Particles collided with enemy " + gameObject.name);
+        if (_deathFXParticle != null)
+        {
+            Instantiate(_deathFXParticle, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
 }
