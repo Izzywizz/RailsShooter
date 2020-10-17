@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
     /// <param name="other"></param>
     private void OnParticleCollision(GameObject other)
     {
-        if (_deathFXParticle != null)
+        if (_deathFXParticle != null && _parent != null)
         {
             GameObject deathParticleFX = Instantiate(_deathFXParticle, transform.position, Quaternion.identity);
             deathParticleFX.transform.parent = _parent;
