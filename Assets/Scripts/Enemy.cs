@@ -8,6 +8,9 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private GameObject _deathFXParticle = null;
 
+    [SerializeField]
+    private Transform _parent;
+
     /// <summary>
     /// 
     /// </summary>
@@ -26,7 +29,8 @@ public class Enemy : MonoBehaviour
     {
         if (_deathFXParticle != null)
         {
-            Instantiate(_deathFXParticle, transform.position, Quaternion.identity);
+            GameObject deathParticleFX = Instantiate(_deathFXParticle, transform.position, Quaternion.identity);
+            deathParticleFX.transform.parent = _parent;
         }
         Destroy(gameObject);
     }
