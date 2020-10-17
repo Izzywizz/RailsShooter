@@ -7,7 +7,10 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Speed, Clamp and Position/ Control Pitch")]
+    [Header("General")]
+
+    [SerializeField]
+    GameObject[] _guns;
 
     [Tooltip("metres per second")]
     [SerializeField]
@@ -49,6 +52,7 @@ public class PlayerController : MonoBehaviour
         {
             ProcessTranslation();
             ProcessRotation();
+            ProcessFiring();
         }
     }
 
@@ -106,4 +110,46 @@ public class PlayerController : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void ActivateGuns()
+    {
+        for (int i = 0; i < _guns.Length; i++)
+        {
+            _guns[i].SetActive(true);
+        }
+    }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void DeactivateGuns()
+    {
+        for (int i = 0; i < _guns.Length; i++)
+        {
+            _guns[i].SetActive(false);
+        }
+    }
+
+
+
 }

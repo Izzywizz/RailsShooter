@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &186566433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5248763084326748589, guid: 47bd819bee1b7c5438b6a06dcf6eefdd,
+    type: 3}
+  m_PrefabInstance: {fileID: 4641049746261795668}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &205558163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,6 +1102,12 @@ Transform:
   m_Father: {fileID: 883627186}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1435841816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4641049746836187541, guid: 47bd819bee1b7c5438b6a06dcf6eefdd,
+    type: 3}
+  m_PrefabInstance: {fileID: 4641049746261795668}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1459753522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,6 +1498,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 963194228}
     m_Modifications:
+    - target: {fileID: 1734071400, guid: 47bd819bee1b7c5438b6a06dcf6eefdd, type: 3}
+      propertyPath: _guns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734071400, guid: 47bd819bee1b7c5438b6a06dcf6eefdd, type: 3}
+      propertyPath: _guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 186566433}
+    - target: {fileID: 1734071400, guid: 47bd819bee1b7c5438b6a06dcf6eefdd, type: 3}
+      propertyPath: _guns.Array.data[1]
+      value: 
+      objectReference: {fileID: 1435841816}
     - target: {fileID: 4360611986375025733, guid: 47bd819bee1b7c5438b6a06dcf6eefdd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1569,7 +1593,7 @@ PrefabInstance:
     - target: {fileID: 4641049746836187541, guid: 47bd819bee1b7c5438b6a06dcf6eefdd,
         type: 3}
       propertyPath: m_Name
-      value: Bullets Left
+      value: Gun Left
       objectReference: {fileID: 0}
     - target: {fileID: 5248763084326748584, guid: 47bd819bee1b7c5438b6a06dcf6eefdd,
         type: 3}
@@ -1594,7 +1618,7 @@ PrefabInstance:
     - target: {fileID: 5248763084326748589, guid: 47bd819bee1b7c5438b6a06dcf6eefdd,
         type: 3}
       propertyPath: m_Name
-      value: Bullets Right
+      value: Gun Right
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47bd819bee1b7c5438b6a06dcf6eefdd, type: 3}
